@@ -21,3 +21,8 @@ p {
   margin: 20px;
   line-height: 1.5;
 }
+h2 {
+  font-size: 1.5em;
+  margin: 20px;
+  color: #333;
+}
