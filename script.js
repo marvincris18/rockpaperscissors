@@ -29,8 +29,7 @@ function getHumanChoice(){
 // console.log(getHumanChoice());
 // console.log(getComputerChoice());
 
-let humanScore = 0;
-let computerScore = 0;
+
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
@@ -52,28 +51,36 @@ function playRound(humanChoice, computerChoice) {
 // console.log(playRound("Rock", "Scissors"));  
 // console.log(playRound("Rock", "Rock"));
 
-let mmChoice = getHumanChoice();
+let humanScore = 0;
+let computerScore = 0;
 
-console.log(playRound(mmChoice, getComputerChoice()));
-console.log(playRound(mmChoice, getComputerChoice()));
-console.log(playRound(mmChoice, getComputerChoice()));
-console.log(playRound(mmChoice, getComputerChoice()));
-console.log(playRound(mmChoice, getComputerChoice()));
 
-console.log("\n-------------\n");
-console.log("Final Results");
+function playGame() {
+    
+    
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(getHumanChoice(), getComputerChoice()));
+    }
+    
+    console.log("\n-------------\n");
+    console.log("Final Results");
 
-console.log(`Your score: ${humanScore}`);
-console.log(`Computer score: ${computerScore}`);
+    console.log(`Your score: ${humanScore}`);
+    console.log(`Computer score: ${computerScore}`);
 
-if (humanScore > computerScore) {
-    console.log("You win the game!");
+    if (humanScore > computerScore) {
+        console.log("You win the game!");
+    }
+    else if (humanScore < computerScore) {
+        console.log("You lose the game!");
+    }
+    else {
+        console.log("It's a tie!");
+    }
+
+    console.log("\n\nGame Over");
 }
-else if (humanScore < computerScore) {
-    console.log("You lose the game!");
-}
-else {
-    console.log("It's a tie!");
-}
 
-console.log("\n\nGame Over");
+playGame();
+
+
