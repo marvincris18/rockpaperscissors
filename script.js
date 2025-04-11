@@ -13,8 +13,18 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
+// console.log(getComputerChoice());
+// console.log(getComputerChoice());
+// console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+function getHumanChoice(){
+    let humanChoice = "";
+    humanChoice=  prompt("Enter your choice: Rock, Paper, or Scissors");
+    humanChoice = humanChoice.toLowerCase();
+    humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1);
+    return humanChoice;
+}
+
+console.log(getHumanChoice());
