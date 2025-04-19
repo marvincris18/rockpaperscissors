@@ -1,6 +1,11 @@
 # rockpaperscissors
 Rock Paper Scissors Game TOP Learning Project
 
+** rps-ui branch **
+practice git branching
+
+merge branch to main
+
 computer choice
 - Rock, Paper, Scissors -- Math.random
 computerRandom = Math.floor(Math.random()*300)+1
